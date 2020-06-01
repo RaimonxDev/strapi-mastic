@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marcas",
+  "info": {
+    "name": "Marcas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "slogan": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "mostrar_inicio": {
+      "type": "boolean",
+      "default": false
+    },
+    "pagina_oficial": {
+      "type": "string"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "mascotas": {
+      "collection": "mascota"
+    },
+    "pais": {
+      "model": "paises"
+    },
+    "proteinas": {
+      "collection": "ingredientes"
+    },
+    "grain_free": {
+      "type": "boolean"
+    }
+  }
+}

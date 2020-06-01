@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mascotas",
+      "handler": "mascota.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mascotas/count",
+      "handler": "mascota.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mascotas/:id",
+      "handler": "mascota.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mascotas",
+      "handler": "mascota.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mascotas/:id",
+      "handler": "mascota.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mascotas/:id",
+      "handler": "mascota.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

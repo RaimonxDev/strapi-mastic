@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "horarios",
+  "info": {
+    "name": "horarios"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "horario_de_apertura": {
+      "type": "component",
+      "repeatable": false,
+      "component": "horarios.horario-de-apertura"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/marcas",
+      "handler": "marcas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/marcas/count",
+      "handler": "marcas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/marcas/:id",
+      "handler": "marcas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/marcas",
+      "handler": "marcas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/marcas/:id",
+      "handler": "marcas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/marcas/:id",
+      "handler": "marcas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

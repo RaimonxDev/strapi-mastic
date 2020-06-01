@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/horarios",
+      "handler": "horarios.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/horarios",
+      "handler": "horarios.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/horarios",
+      "handler": "horarios.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

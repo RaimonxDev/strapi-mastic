@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_horarios_horario_de_aperturas",
+  "info": {
+    "name": "horario_de_apertura",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "dias": {
+      "type": "string"
+    },
+    "horas": {
+      "type": "string"
+    },
+    "continuado": {
+      "type": "boolean"
+    }
+  }
+}

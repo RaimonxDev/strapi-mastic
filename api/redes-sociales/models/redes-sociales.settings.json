@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "redes_sociales",
+  "info": {
+    "name": "redes_sociales"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "red_social": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
