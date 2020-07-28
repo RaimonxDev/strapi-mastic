@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_porciones_guia_de_alimentacions",
+  "info": {
+    "name": "Guia de alimentacion",
+    "icon": "apple-alt"
+  },
+  "options": {},
+  "attributes": {
+    "edad": {
+      "type": "enumeration",
+      "enum": [
+        "puppy",
+        "kitten",
+        "adulto",
+        "senior"
+      ],
+      "required": true
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

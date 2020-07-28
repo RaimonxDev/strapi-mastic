@@ -11,6 +11,10 @@
   "attributes": {
     "tipo_mascota": {
       "type": "string"
+    },
+    "producto": {
+      "via": "tipo_alimento",
+      "model": "productos"
     }
   }
 }

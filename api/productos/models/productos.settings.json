@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "name": "Productos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre_producto": {
+      "type": "string"
+    },
+    "marca": {
+      "via": "producto",
+      "model": "marcas"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "ingredientes": {
+      "type": "richtext"
+    },
+    "tipo_alimento": {
+      "collection": "mascota",
+      "via": "producto"
+    },
+    "precio": {
+      "type": "biginteger"
+    },
+    "guia_de_alimentaria": {
+      "type": "component",
+      "repeatable": true,
+      "component": "porciones.guia-de-alimentacion"
+    },
+    "Estado": {
+      "type": "enumeration",
+      "enum": [
+        "borrador",
+        "publicado"
+      ]
+    },
+    "analisis": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
