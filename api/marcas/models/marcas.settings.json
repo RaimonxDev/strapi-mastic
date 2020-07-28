@@ -48,13 +48,13 @@
     "grain_free": {
       "type": "boolean"
     },
-    "producto": {
-      "model": "productos",
-      "via": "marca"
-    },
     "slug": {
       "type": "uid",
       "targetField": "nombre"
+    },
+    "productos": {
+      "via": "marca",
+      "collection": "productos"
     }
   }
 }

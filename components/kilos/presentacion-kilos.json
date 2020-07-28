@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_kilos_presentacion_kilos",
+  "info": {
+    "name": "presentacion_kilos",
+    "icon": "balance-scale-left"
+  },
+  "options": {},
+  "attributes": {
+    "peso": {
+      "type": "decimal"
+    },
+    "precio": {
+      "type": "integer"
+    }
+  }
+}

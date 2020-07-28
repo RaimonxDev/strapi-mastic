@@ -10,38 +10,70 @@
   },
   "attributes": {
     "nombre_producto": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "marca": {
-      "via": "producto",
-      "model": "marcas"
+      "model": "marcas",
+      "via": "productos"
     },
     "descripcion": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "ingredientes": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
-    "tipo_alimento": {
-      "collection": "mascota",
-      "via": "producto"
-    },
-    "precio": {
-      "type": "biginteger"
-    },
-    "guia_de_alimentaria": {
+    "guia_de_alimentacion": {
       "type": "component",
       "repeatable": true,
-      "component": "porciones.guia-de-alimentacion"
+      "component": "porciones.guia-de-alimentacion",
+      "required": true
     },
     "Estado": {
       "type": "enumeration",
       "enum": [
         "borrador",
         "publicado"
-      ]
+      ],
+      "default": "borrador",
+      "required": true
     },
     "analisis": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "imagen_producto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "peso_producto": {
+      "type": "component",
+      "repeatable": true,
+      "component": "kilos.presentacion-kilos",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nombre_producto",
+      "required": false
+    },
+    "hero": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -51,6 +83,10 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "mascota": {
+      "model": "mascota",
+      "via": "productos"
     }
   }
 }
